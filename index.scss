@@ -1,9 +1,50 @@
+$primary-color: #404b57;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; // 一開始是透明的
+    transform: translateY(30px); // 從下方 30px 的位置開始
+  }
+  100% {
+    opacity: 1; //清晰
+    transform: translateY(0); //移動到原本的位置（上浮）
+  }
+}
+
+/* 淡入＋往上浮 */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* 延遲組 */
+.delay-0 {
+  animation-delay: 0s;
+}
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-$primary-color: #404b57;
+
 html,
 body {
   width: 100%;
@@ -17,6 +58,8 @@ header {
     //background-color: white;
     // position: sticky;
     // top: 0;
+    animation: slideDown 0.8s ease forwards;
+    animation-delay: 0.2s;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -97,4 +140,9 @@ header {
       }
     }
   }
+}
+main {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8; //#eaeaea
 }

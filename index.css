@@ -1,3 +1,47 @@
+@charset "UTF-8";
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 淡入＋往上浮 */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* 延遲組 */
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +60,8 @@ header {
   height: 100%;
 }
 header .navbar {
+  animation: slideDown 0.8s ease forwards;
+  animation-delay: 0.2s;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -94,4 +140,10 @@ header .banner_text .right_text button a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
 }/*# sourceMappingURL=index.css.map */
