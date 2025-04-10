@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Frontend",
+    "skills": [
+      "HTML",
+      "CSS",
+      "SCSS",
+      "JavaScript",
+      "jQuery",
+      "React",
+      "Bootstrap"
+    ]
+  },
+  {
+    "title": "Backend",
+    "skills": ["PHP", "Node.js", "Express", "RESTful API"]
+  },
+  {
+    "title": "DataBase & Tools",
+    "skills": [
+      "MySQL",
+      "Git",
+      "GitHub",
+      "Figma",
+      "Postman",
+      "Netlify",
+      "VSCode"
+    ]
+  }
+]
