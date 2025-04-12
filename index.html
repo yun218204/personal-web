@@ -64,7 +64,7 @@
           </p>
         </div>
       </div>
-      <section class="skills">
+      <section class="skills fade-in delay-1">
         <h2 class="skills_title">Skills</h2>
         <p class="skills_description">以下是我學習並使用過的技術。</p>
         <div class="skills__content"></div>
@@ -75,28 +75,31 @@
       fetch("./skills.json")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           const content = document.querySelector(".skills__content");
           data.forEach((item) => {
-            //分類標題
-            const skillsTitle = document.createElement("h3"); //創一個h3
-            skillsTitle.classList.add("skills__category-title");
-            skillsTitle.textContent = item.title; //h3=我的jsontitle
-            //
+            // 卡片
+            const card = document.createElement("div"); //用foreach去做三張卡片容器
+            card.classList.add("skill-card");
 
-            //技能清單
+            // 類別標題
+            const title = document.createElement("h3");
+            title.textContent = item.title;
+            card.appendChild(title);
+
+            // 技能清單
             const ul = document.createElement("ul");
-            ul.classList.add("skills__list"); //+class
+            ul.classList.add("skill-tag-list");
 
             item.skills.forEach((skill) => {
+              //item是每一筆物件 要抓裡面的skills去跑
               const li = document.createElement("li");
-              li.classList.add("skills__item"); //+class
+              li.classList.add("skill-tag");
               li.textContent = skill;
               ul.appendChild(li);
             });
-            //h3跟ul整組+到畫面
-            content.appendChild(skillsTitle);
-            content.appendChild(ul);
+
+            card.appendChild(ul);
+            content.appendChild(card);
           });
         })
         .catch((error) => console.error("錯誤:", error));

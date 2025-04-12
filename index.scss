@@ -1,4 +1,5 @@
 $primary-color: #404b57;
+$primary-background-color: #f4f4f4;
 @keyframes fadeInUp {
   0% {
     opacity: 0; // 一開始是透明的
@@ -172,6 +173,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 0 1rem 0;
     .text_box {
       margin-top: 1rem;
       width: 100%;
@@ -190,6 +192,56 @@ main {
     }
   }
   .skills {
-    background-color: yellow;
+    background-color: $primary-background-color;
+
+    .skills_title {
+      font-size: 3rem;
+      padding: 0 2rem;
+      color: $primary-color;
+    }
+    .skills_description {
+      padding: 1rem 2rem;
+    }
+    .skills__content {
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+      ); //自動排好幾欄卡片，每張卡片至少 300px 寬，最多可以撐滿一列的空間，畫面夠寬就多放幾張，畫面小就自動掉行
+      gap: 2rem;
+      padding: 2rem 1rem;
+
+      .skill-card {
+        padding: 0 1.5rem;
+        //width: 500px;
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: bolder;
+          margin-bottom: 1rem;
+          color: #2c3e50;
+          text-align: left;
+        }
+
+        .skill-tag-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem; //可在ul設gpa或li設margin
+          list-style: none;
+
+          .skill-tag {
+            background-color: #e1e8f0;
+            padding: 0.7rem 0.8rem;
+            font-size: 1rem;
+            border-radius: 999px;
+            color: #2d3436;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 }
