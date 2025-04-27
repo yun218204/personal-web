@@ -19,10 +19,10 @@ export default function Navbar() {
       </div>
       <div className="navbars_items">
         <a href="#aboutme">About Me</a>
-        <a href="">Career</a>
-        <a href="">Skills</a>
-        <a href="">Project</a>
-        <a href="">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );

@@ -4,7 +4,7 @@ import SkillCard from "./SkillCard";
 
 export default function Skills() {
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <h2 className="skills_title">Skills</h2>
       <p className="skills_description">以下是我學習並使用過的技術。</p>
       <div className="skills__content">
