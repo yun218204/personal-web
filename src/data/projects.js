@@ -3,7 +3,7 @@ export const projects = [
     img: "https://i.imgur.com/TqJWSY4.jpeg",
     title: "釜山旅遊網站",
     description:
-      "開發一個提供釜山行程購買、客製化規劃與出團心得分享的旅遊平台。後端使用 PHP+MySQL，實作會員系統與訂單資料管理，確保資料安全與操作流暢。",
+      "這是一個針對釜山旅遊設計的行程平台，支援行程購買、客製化規劃及心得分享功能。後端技術採用 PHP + MySQL，建置會員登入與訂單資料管理系統。由於為資策會小型專題，目前仍持續補齊部分分頁與細部功能，未來將持續優化使用體驗。",
     github: "https://github.com/yun218204/BUSAN_website.git",
   },
   {
@@ -17,14 +17,14 @@ export const projects = [
     img: "https://i.imgur.com/6Tqh8GP.png",
     title: "健康提醒網站",
     description:
-      "開發一套以會員登入制為基礎的健康管理系統。使用者需登入後才能操作，資料暫存於 session 中，避免遺失。後端採用 Node.js，搭配 EJS 模板引擎進行頁面渲染",
+      "目前已建置以會員系統為基礎的健康管理平台，支援用藥紀錄與資料暫存（使用 session 維護）。後端使用 Node.js，並搭配 EJS 模板進行動態頁面渲染。後續將持續開發健康新聞輪播、歷史紀錄查詢與衛教內容推播功能。",
     github: "https://github.com/yun218204/medicine_project.git",
   },
   {
     img: "https://i.imgur.com/yIUXw1M.jpeg",
     title: "LINE Bot ",
     description:
-      " 天氣提醒：每天早上自動推播天氣資訊與穿搭建議，使用者無需手動查詢。📚 讀書打卡系統：可記錄每日學習時間並累計統計，幫助使用者掌握學習進度。",
+      " 目前已完成基本架設並成功部署至 Render，正在開發天氣提醒與讀書打卡功能，預計未來支援自動推播每日天氣資訊與學習進度紀錄。",
     github: "https://github.com/yun218204/yun-linebot.git",
   },
 ];

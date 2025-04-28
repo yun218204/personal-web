@@ -55,7 +55,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Header Navbar */
 header {
   background: linear-gradient(to right, white 50%, #f4f4f4 50%);
   width: 100%;
@@ -157,8 +156,60 @@ header {
     }
   }
 }
+//  RWD
+@media (max-width: 768px) {
+  header {
+    .navbar {
+      flex-direction: column; // navbar改直排
+      padding: 1rem 0;
 
-/* Main Content */
+      .navbar_logo {
+        margin-bottom: 1rem;
+      }
+
+      .navbars_items {
+        flex-direction: column; // 選單連結改直排
+        gap: 1rem; // link之間留間距
+        align-items: center; // 置中對齊
+      }
+    }
+
+    .banner_text {
+      flex-direction: column; // 左右改上下
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      img {
+        display: none; // 隱藏左邊圖片
+      }
+
+      .right_text {
+        width: 100%; // 右邊區塊寬度 100%
+        border: none; // 移除外框
+        margin: 0; // 移除 margin
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .text_name {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        button {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
 main {
   width: 100%;
   background-color: #f8f8f8;
@@ -394,6 +445,33 @@ main {
     }
   }
 }
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column; // 整個專案區變上下排
+    align-items: center;
+    height: auto; // 不要固定高度了，內容自適應
+
+    .project_left {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .project_right {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+
+      img {
+        width: 80%; // 縮小圖片
+      }
+
+      .project-description {
+        display: none; // 把介紹文字整個藏起來
+      }
+    }
+  }
+}
+
 footer {
   padding: 3rem 1rem;
   background-color: #f8f8f8;
@@ -426,5 +504,24 @@ footer {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #666;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-info {
+      p {
+        font-size: 1rem;
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }

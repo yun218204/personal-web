@@ -1,10 +1,10 @@
 import { useState } from "react"; // 抓 React 的 useState
-import { projects } from "../data/projects"; // 抓剛剛 export 的資料
+import { projects } from "../data/projects";
 
 export default function ProjectSection() {
   const [currentIndex, setCurrentIndex] = useState(0); // 控制現在第幾個專案
 
-  const project = projects[currentIndex]; // 抓目前要顯示哪一筆資料
+  const project = projects[currentIndex];
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
@@ -32,7 +32,7 @@ export default function ProjectSection() {
       <div className="project_right">
         <img src={project.img} alt={project.title} />
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <p className="project-description">{project.description}</p>
         <button className="project-button">
           <a href={project.github} target="_blank" rel="noopener noreferrer">
             查看 Github
