@@ -24,7 +24,7 @@ export default function Contact() {
           <p>
             LinkedIn：
             <a
-              href="www.linkedin.com/in/ci-yun-chen-7072722a5"
+              href="https://www.linkedin.com/in/ci-yun-chen-7072722a5"
               target="_blank"
               rel="noopener noreferrer"
             >
