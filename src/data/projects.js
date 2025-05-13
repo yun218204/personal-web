@@ -24,7 +24,7 @@ export const projects = [
     img: "https://i.imgur.com/yIUXw1M.jpeg",
     title: "LINE Bot ",
     description:
-      " 目前已完成基本架設並成功部署至 Render，正在開發天氣提醒與讀書打卡功能，預計未來支援自動推播每日天氣資訊與學習進度紀錄。",
+      " 目前已完成基本架設並成功部署至 Render，並串接google places api 與 天氣api提供六個位置查詢功能。",
     github: "https://github.com/yun218204/yun-linebot.git",
   },
 ];
