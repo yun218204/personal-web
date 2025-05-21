@@ -27,4 +27,11 @@ export const projects = [
       " 目前已完成基本架設並成功部署至 Render，並串接google places api 與 天氣api提供六個位置查詢功能。",
     github: "https://github.com/yun218204/yun-linebot.git",
   },
+  {
+    img: "https://i.postimg.cc/bvgPR50s/message-Image-1747813609797.jpg",
+    title: "SteplyGo ",
+    description:
+      "此為資策會大型與組員協作之專題，前端使用React框架與後端使用Node.js，資料庫部分則是由雲端資料庫Neon所開發而成，這是一個以「西班牙朝聖之路」為主題的旅程規劃網站。網站提供從航班、住宿、路線到套裝行程的整合式規劃體驗，致力於打造一個結合資訊查詢與即時互動的朝聖旅遊服務平台。",
+    github: "https://github.com/ScottLinxplore/Camino_team1.git",
+  },
 ];
