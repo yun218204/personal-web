@@ -312,46 +312,108 @@ main {
       }
     }
   }
-  .timeline-section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 1rem;
-    background-color: #f4f4f4;
-    .timeline-title {
-      color: #404b57;
-      font-weight: bold;
-    }
-    .timeline {
-      position: relative; //給圓點對位置
-      border-left: 2px solid #ccc;
-      padding-left: 1rem;
-      margin: 1rem 0;
+   /* ============================= */
+  /* Experience Section 新版卡片 */
+  /* ============================= */
 
-      .timeline-item {
-        position: relative;
+  .experience-section {
+    width: 100%;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #f4f4f4, #ffffff);
+
+    .experience-header-wrap {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      .experience-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-subtitle {
+        color: #6c7a89;
+        font-size: 1rem;
+      }
+    }
+
+    .experience-list {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .experience-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      }
+
+      .experience-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
         margin-bottom: 1rem;
 
-        .timeline-dot {
-          position: absolute;
-          top: 0;
-          left: -22px;
-          transform: translateY(0);
-          width: 10px;
-          height: 10px;
-          background: linear-gradient(135deg, #6a8190, #90a4ae);
-          border-radius: 50%;
-          border: 2px solid white;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        .experience-badge {
+          background: #2c3e50;
+          color: white;
+          padding: 0.4rem 1rem;
+          border-radius: 999px;
+          font-size: 0.8rem;
+          font-weight: bold;
         }
-        .timeline-content {
-          h3 {
-            font-size: 1rem;
+
+        .experience-main {
+          text-align: right;
+
+          .experience-role {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
           }
-          p {
-            padding: 0.3rem 0;
+
+          .experience-company {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .experience-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+
+        .chip {
+          background: #e8eef3;
+          padding: 0.5rem 0.9rem;
+          border-radius: 999px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: #34495e;
+        }
+      }
+
+      .experience-body {
+        ul {
+          padding-left: 1.2rem;
+
+          li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            color: #2d3436;
           }
         }
       }
