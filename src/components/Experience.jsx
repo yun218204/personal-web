@@ -173,34 +173,7 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* 資策會 */}
-        <div className="experience-card">
-          <div className="experience-card-top">
-            <div className="experience-badge">2024.12 - 2025.05</div>
-
-            <div className="experience-main">
-              <h3 className="experience-role">前端工程師養成班</h3>
-              <div className="experience-company">資策會</div>
-            </div>
-          </div>
-
-          <div className="experience-chips">
-            <span className="chip">HTML</span>
-            <span className="chip">CSS</span>
-            <span className="chip">JavaScript</span>
-            <span className="chip">React</span>
-            <span className="chip">RWD</span>
-          </div>
-
-          <div className="experience-body">
-            <ul>
-              <li>個人專題製作：從需求拆解到功能完成與部署</li>
-              <li>團隊協作專題：分工開發、整合測試與版本控制流程</li>
-              <li>前端、後端與資料庫整合實作，熟悉 API 串接與資料處理</li>
-              <li>建立 Git 協作習慣，培養可維護的開發流程</li>
-            </ul>
-          </div>
-        </div>
+  
       </div>
     </div>
   );
