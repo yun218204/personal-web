@@ -21,16 +21,7 @@ export default function Contact() {
               yun218204
             </a>
           </p>
-          <p>
-            LinkedIn：
-            <a
-              href="https://www.linkedin.com/in/ci-yun-chen-7072722a5"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              查看我的 LinkedIn
-            </a>
-          </p>
+          
         </div>
 
         <p className="thanks">

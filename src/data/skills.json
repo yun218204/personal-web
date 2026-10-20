@@ -1,19 +1,11 @@
 [
   {
     "title": "Frontend",
-    "skills": [
-      "HTML",
-      "CSS",
-      "SCSS",
-      "JavaScript",
-      "jQuery",
-      "React",
-      "Bootstrap"
-    ]
+    "skills": ["HTML", "CSS", "SCSS", "JavaScript", "Vue", "Bootstrap"]
   },
   {
     "title": "Backend",
-    "skills": ["PHP", "Node.js", "Express", "RESTful API"]
+    "skills": ["C#", "Node.js", "Express", "RESTful API"]
   },
   {
     "title": "DataBase & Tools",
@@ -24,9 +16,10 @@
       "Figma",
       "Postman",
       "Netlify",
-      "VSCode",
+      "Postgres",
       "Neon",
-      "Render"
+      "Render",
+      "Swagger"
     ]
   }
 ]
