@@ -879,3 +879,135 @@ footer {
     }
   }
 }
+
+/* Mobile layout fixes: override the more-specific desktop rules above. */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  main .timeline-section {
+    width: 100%;
+    padding: 2.5rem 1rem 3rem;
+    align-items: stretch;
+  }
+
+  main .timeline-section .timeline-title,
+  main .timeline-section .timeline-subtitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  main .timeline-section .timeline {
+    width: 100%;
+    max-width: none;
+    align-self: stretch;
+  }
+
+  main .timeline-section .timeline .timeline-item {
+    width: 100%;
+  }
+
+  main .timeline-section .timeline .timeline-item .timeline-content {
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem 1.25rem 1.75rem;
+    border-radius: 18px;
+  }
+
+  main .timeline-section .timeline .timeline-item .experience-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  main .timeline-section .timeline .timeline-item .experience-role {
+    text-align: center;
+  }
+
+  main .timeline-section .timeline .timeline-item .experience-role h3 {
+    font-size: 1.4rem;
+    overflow-wrap: anywhere;
+  }
+
+  main .timeline-section .timeline .timeline-item .experience-tags {
+    margin: 1.75rem 0 1.25rem;
+    justify-content: center;
+  }
+
+  main .timeline-section .timeline .timeline-item .experience-list {
+    width: 100%;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  main .work-section {
+    width: 100%;
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  main .work-section .work-layout {
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  main .work-section .work-intro {
+    width: 100%;
+    text-align: center;
+  }
+
+  main .work-section .work-intro h2 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  main .work-section .work-intro-description {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .work-section .work-navigation {
+    justify-content: center;
+  }
+
+  main .work-section .work-card {
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    min-height: 0;
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  main .work-section .work-diagram {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 0.6rem;
+  }
+
+  main .work-section .work-diagram svg {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main .work-section .work-copy {
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem;
+  }
+
+  main .work-section .work-copy h3,
+  main .work-section .work-copy .work-description {
+    overflow-wrap: anywhere;
+  }
+}
