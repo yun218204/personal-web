@@ -1,0 +1,95 @@
+export const engineeringWork = [
+  {
+    id: "enterprise-system-development",
+    diagramType: "architecture",
+    title: "企業系統開發與前後端整合",
+    description:
+      "參與企業 Web 系統的開發與維護，使用 ASP.NET Core、Vue 和 RESTful API 完成前後端功能串接，也會透過 Entity Framework Core 處理資料庫操作。工作中會處理表單驗證、資料傳遞、API 回應與例外狀況，讓功能正常運作，也方便後續維護。",
+    technologies: [
+      "ASP.NET Core MVC / Web API",
+      "C#",
+      "Vue.js",
+      "JavaScript",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "RESTful API",
+    ],
+    diagram: [
+      "前端（Vue）",
+      "後端 API（ASP.NET Core）",
+      "商業邏輯／服務層",
+      "資料存取／PostgreSQL",
+    ],
+  },
+  {
+    id: "business-logic-lifecycle",
+    diagramType: "lifecycle",
+    title: "商業邏輯與資料生命週期管理",
+    description:
+      "開發和維護系統時，會遇到多條件的規則和不同的資料狀態，例如有效期限、使用狀態和特殊日期。主要透過 C# 和資料庫操作完成這些規則，並檢查資料關聯、狀態變化和邊界情況，避免流程出錯或資料不一致。",
+    technologies: [
+      "C#",
+      "ASP.NET Core",
+      "EF Core",
+      "PostgreSQL",
+      "Business Logic",
+      "Data Validation",
+      "State Management",
+    ],
+    diagram: [
+      "建立資料",
+      "規則與資格驗證",
+      "有效期間／狀態計算",
+      "資料使用與狀態更新",
+      "歷史紀錄或失效判斷",
+    ],
+  },
+  {
+    id: "authentication-access-control",
+    diagramType: "authentication",
+    title: "身分驗證與會員權限管理",
+    description:
+      "參與會員登入和權限功能的開發，包含 JWT 驗證、角色權限控制，以及 Google、LINE 等第三方登入。會依照登入方式查詢或建立會員資料，再由後端確認使用者是否有權限使用對應的 API。",
+    technologies: [
+      "ASP.NET Core Authentication",
+      "JWT",
+      "OAuth 2.0",
+      "Google Login",
+      "LINE Login",
+      "Role-Based Authorization",
+      "RESTful API",
+    ],
+    diagram: [
+      "使用者登入",
+      "帳密登入／第三方 OAuth",
+      "驗證與查詢使用者資料",
+      "建立或取得帳號資訊",
+      "簽發 JWT",
+      "依角色權限存取 API",
+    ],
+  },
+  {
+    id: "system-troubleshooting-maintenance",
+    diagramType: "troubleshooting",
+    title: "系統問題排查與功能維護",
+    description:
+      "維護既有系統時，會透過 API 測試、程式除錯和資料庫查詢，找出前後端資料流程中發生問題的地方。確認原因後修改程式，搭配 Git 和團隊流程完成測試，確保修正不影響原本的功能。",
+    technologies: [
+      "C#",
+      "Debugging",
+      "Swagger / OpenAPI",
+      "SQL",
+      "Git",
+      "API Testing",
+      "Error Handling",
+    ],
+    diagram: [
+      "問題回報",
+      "重現問題與調查",
+      "API／資料庫分析",
+      "修改程式",
+      "回歸測試",
+      "確認結果",
+    ],
+  },
+];

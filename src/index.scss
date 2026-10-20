@@ -41,6 +41,43 @@
   }
 }
 
+@keyframes workCardIn {
+  from {
+    opacity: 0.35;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes comingSoonBounce {
+  0%,
+  72%,
+  100% {
+    transform: translateY(0);
+  }
+  14% {
+    transform: translateY(-8px);
+  }
+  28% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes comingSoonTwinkle {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
 /* 全域 reset */
 * {
   margin: 0;
@@ -414,118 +451,334 @@ main {
       }
     }
   }
-  .project {
+  .work-section {
     width: 100%;
-    height: 50vh;
-    display: flex;
-    background-color: white;
-    .project_left,
-    .project_right {
-      flex: 1; //  左右兩邊平分空間
+    padding: 3rem 1.25rem 3.5rem;
+    background: #fff;
+    color: #2c3e50;
+
+    .work-layout {
+      width: min(100%, 1100px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(220px, 0.7fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: stretch;
     }
-    .project_left {
-      padding-top: 1rem;
+
+    .work-intro {
       display: flex;
       flex-direction: column;
-      text-align: center;
       justify-content: center;
-      gap: 10px;
-      padding-left: 1rem;
+      text-align: left;
+
       h2 {
+        margin: 0;
         color: #404b57;
+        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        line-height: 1.1;
       }
-      .project-navigation {
-        //margin-left: auto;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
 
-        .nav-button {
-          width: 32px;
-          height: 32px;
-          border: 2px solid #2c3e50;
-          background: transparent;
-          border-radius: 50%; // 圓形
-          font-size: 1.5rem;
-          font-weight: bold;
-          color: #2c3e50;
-          cursor: pointer;
-          transition: all 0.3s ease;
+      .work-intro-chinese {
+        margin: 0.8rem 0 1.25rem;
+        color: #5d7890;
+        font-size: 1.15rem;
+        font-weight: bold;
+      }
 
-          &:hover {
-            background: #093b67;
-            color: white;
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(0, 179, 164, 0.4);
-          }
-
-          &:active {
-            transform: scale(0.95);
-          }
-        }
+      .work-intro-description {
+        margin: 0;
+        color: #59646d;
+        font-size: 1rem;
+        line-height: 1.85;
       }
     }
-    .project_right {
-      flex: 2;
+
+    .work-navigation {
       display: flex;
       align-items: center;
-      gap: 1rem; // 上下間距
-      .project-button {
-        padding: 0.5rem 1.5rem;
-        background-color: #2c3e50;
-        color: white;
-        border: none;
-        border-radius: 999px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
+      gap: 1rem;
+      margin-top: 2rem;
 
-        a {
-          color: inherit;
-          text-decoration: none;
+      .nav-button {
+        width: 42px;
+        height: 42px;
+        border: 2px solid #2c3e50;
+        background: transparent;
+        border-radius: 50%;
+        color: #2c3e50;
+        font-size: 1.35rem;
+        cursor: pointer;
+        transition: all 0.25s ease;
+
+        &:hover,
+        &:focus-visible {
+          background: #2c3e50;
+          color: #fff;
+          transform: translateY(-2px);
         }
 
-        &:hover {
-          background-color: #34495e;
-          transform: scale(1.05);
+        &:focus-visible {
+          outline: 3px solid rgba(93, 120, 144, 0.35);
+          outline-offset: 3px;
         }
       }
 
-      img {
-        width: 50%;
+      .work-index {
+        color: #71818e;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+      }
+    }
 
+    .work-card {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      align-items: center;
+      min-height: 420px;
+      padding: 1.4rem;
+      border: 1px solid #e4e9ed;
+      border-radius: 24px;
+      background: #f8fafb;
+      box-shadow: 0 16px 35px rgba(43, 58, 72, 0.1);
+      animation: workCardIn 0.35s ease;
+    }
+
+    .work-diagram {
+      min-width: 0;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid #e8edf1;
+
+      svg {
+        width: 100%;
         height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        max-height: 310px;
+      }
+    }
+
+    .diagram-node {
+      fill: #e8eff4;
+      stroke: #71899a;
+      stroke-width: 1.5;
+    }
+
+    .diagram-node-label {
+      fill: #2c4052;
+      font-size: 14px;
+      font-weight: 700;
+      text-anchor: middle;
+    }
+
+    .diagram-arrow {
+      stroke: #71899a;
+      stroke-width: 2;
+      marker-end: url(#work-arrow);
+    }
+
+    .work-copy {
+      min-width: 0;
+
+      h3 {
+        margin: 0;
+        color: #2c4052;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        line-height: 1.35;
+      }
+
+      .work-description {
+        margin: 1.2rem 0 0;
+        color: #4d5962;
+        font-size: 0.92rem;
+        line-height: 1.75;
+      }
+
+      .work-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin-top: 1.5rem;
+
+        span {
+          padding: 0.45rem 0.7rem;
+          border-radius: 999px;
+          background: #e2eaf0;
+          color: #40566a;
+          font-size: 0.82rem;
+          font-weight: bold;
+        }
       }
     }
   }
 }
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column; // 整個專案區變上下排
-    align-items: center;
-    height: auto; // 不要固定高度了，內容自適應
+@media (max-width: 900px) {
+  .work-section {
+    padding: 3rem 1.25rem 4rem;
 
-    .project_left {
-      padding: 1rem;
+    .work-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .work-intro {
       text-align: center;
-    }
 
-    .project_right {
-      flex-direction: column;
-      align-items: center;
+      .work-navigation {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .work-section {
+    padding: 2.5rem 1rem 3rem;
+
+    .work-card {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      min-height: 0;
       padding: 1rem;
+      border-radius: 18px;
+    }
 
-      img {
-        width: 80%; // 縮小圖片
-      }
+    .work-diagram {
+      min-height: 0;
+      padding: 0.6rem;
+    }
 
-      .project-description {
-        display: none; // 把介紹文字整個藏起來
+    .work-copy {
+      padding: 0.5rem;
+
+      .work-description {
+        font-size: 0.95rem;
+        line-height: 1.8;
       }
     }
+  }
+}
+
+  .project-list-section {
+    width: 100%;
+    padding: 4rem 1.5rem 5rem;
+    background: #f4f4f4;
+  }
+
+  .project-list-card {
+    position: relative;
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 3.5rem 2rem;
+    overflow: hidden;
+    border: 1px solid #dfe7ed;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #ffffff, #f7fafc);
+    box-shadow: 0 18px 35px rgba(43, 58, 72, 0.1);
+    text-align: center;
+  }
+
+  .project-list-card h2 {
+    position: relative;
+    margin: 0;
+    color: #404b57;
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+  }
+
+  .project-list-eyebrow {
+    position: relative;
+    margin: 0 0 0.8rem;
+    color: #8a9eac;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  .project-list-subtitle {
+    position: relative;
+    margin: 0.5rem 0 1.75rem;
+    color: #5d7890;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .coming-soon-message {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    color: #2c4052;
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .coming-soon-message > span:not(.coming-soon-star) {
+    display: inline-block;
+    animation: comingSoonBounce 2.8s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 80ms);
+  }
+
+  .coming-soon-star {
+    display: inline-block;
+    margin-left: 0.35rem;
+    animation: comingSoonTwinkle 2.2s ease-in-out infinite;
+  }
+
+  .project-list-description {
+    position: relative;
+    max-width: 32rem;
+    margin: 1rem auto 0;
+    color: #687782;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .project-list-decoration {
+    position: absolute;
+    color: #d7e3eb;
+    font-family: monospace;
+    font-size: 1.4rem;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .project-list-decoration-left {
+    top: 1.4rem;
+    left: 1.6rem;
+  }
+
+  .project-list-decoration-right {
+    right: 1.6rem;
+    bottom: 1.4rem;
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  .coming-soon-message > span:not(.coming-soon-star),
+  .coming-soon-star {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-list-section {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .project-list-card {
+    padding: 2.5rem 1.25rem;
+    border-radius: 22px;
+  }
+
+  .project-list-description {
+    font-size: 0.95rem;
   }
 }
 

@@ -21,7 +21,8 @@ export default function Navbar() {
         <a href="#aboutme">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#project">Project</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
