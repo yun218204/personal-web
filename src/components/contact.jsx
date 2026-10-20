@@ -3,7 +3,7 @@ export default function Contact() {
   return (
     <>
       <footer className="footer" id="contact">
-        <h2>YUNA CHEN</h2>
+        <h2>YUN CHEN</h2>
         <p>如果你想進一步交流，歡迎透過以下方式聯絡我！</p>
 
         <div className="contact-info">

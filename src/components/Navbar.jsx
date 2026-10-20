@@ -12,7 +12,7 @@ export default function Navbar() {
           />
         </a>
         <span className="text_logo" style={{ fontSize: "2rem" }}>
-          YunaChen's
+          YunChen's
           <br />
           Portfolio
         </span>
