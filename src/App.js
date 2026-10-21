@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import ProjectSection from "./components/ProjectSection";
 import ComingSoon from "./components/ComingSoon";
 import Contact from "./components/contact";
+import AISection from "./components/AISection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Skills />
         <Experience />
         <ProjectSection />
+        <AISection />
         <ComingSoon />
       </main>
       <footer>
@@ -30,3 +32,4 @@ function App() {
 }
 
 export default App;
+

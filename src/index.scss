@@ -12,6 +12,45 @@
   }
 }
 
+
+
+.ai-section {
+  padding: 4rem 2rem;
+  background: #eef0ee;
+  border-top: 1px solid #d6d9d7;
+}
+.ai-heading, .ai-card, .ai-principles { max-width: 1100px; margin: 0 auto; }
+.ai-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; margin-bottom: 2rem; }
+.ai-kicker { color: #65757a; font: 0.75rem "DM Mono", monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.ai-heading h2 { grid-column: 1; color: #404b57; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; }
+.ai-heading h2 span { color: #6a8190; }
+.ai-heading > p:last-child { color: #5f6c72; line-height: 1.8; }
+.ai-tabs { max-width: 1100px; margin: 0 auto; display: flex; gap: 0.5rem; border-bottom: 1px solid #cbd1cf; }
+.ai-tabs button { border: 0; background: transparent; color: #7b888a; padding: 0.8rem 1.2rem; cursor: pointer; font: 0.8rem "DM Mono", monospace; }
+.ai-tabs button.active { color: #2c4052; border-bottom: 3px solid #6a8190; }
+.ai-card { margin-top: 2rem; display: grid; grid-template-columns: 0.9fr 1.1fr; background: #fff; border: 1px solid #d6d9d7; box-shadow: 0 12px 30px rgba(55, 69, 74, 0.08); }
+.ai-card-copy { padding: 2.5rem; border-right: 1px solid #d6d9d7; }
+.ai-card-copy h3 { color: #2c4052; font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.2; margin: 1rem 0; }
+.ai-card-copy > p:not(.ai-kicker) { color: #66747a; line-height: 1.8; margin-bottom: 3rem; }
+.ai-card-copy strong { color: #6a8190; }
+.ai-flow { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+.ai-step { display: grid; grid-template-columns: 42px 1fr; position: relative; padding: 0.7rem 0; color: #34495e; }
+.ai-step span { color: #8da0a9; font: 0.75rem "DM Mono", monospace; }
+.ai-step i { position: absolute; left: 12px; bottom: -0.45rem; color: #8da0a9; font-style: normal; }
+.ai-principles { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; padding-top: 4rem; }
+.ai-principles h3 { color: #404b57; font-size: 2rem; line-height: 1.25; margin-top: 1rem; }
+.ai-principle-list p { color: #65757a; line-height: 1.7; padding: 1rem 0; border-top: 1px solid #cbd1cf; }
+.ai-principle-list b { color: #34495e; }
+@media (max-width: 768px) {
+  .ai-section { padding: 3rem 1rem; }
+  .ai-heading, .ai-card, .ai-principles { grid-template-columns: 1fr; }
+  .ai-card-copy { border-right: 0; border-bottom: 1px solid #d6d9d7; }
+  .ai-principles { gap: 2rem; }
+  .ai-tabs { overflow-x: auto; }
+  .ai-tabs button { white-space: nowrap; }
+}
+
+
 .fade-in {
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
@@ -1011,3 +1050,4 @@ body,
     overflow-wrap: anywhere;
   }
 }
+
