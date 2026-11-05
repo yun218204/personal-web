@@ -5,9 +5,9 @@ import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import ProjectSection from "./components/ProjectSection";
-import ComingSoon from "./components/ComingSoon";
 import Contact from "./components/contact";
 import AISection from "./components/AISection";
+import TravelPlannerShowcase from "./components/TravelPlannerShowcase";
 
 function App() {
   return (
@@ -20,9 +20,9 @@ function App() {
         <AboutMe />
         <Skills />
         <Experience />
+        <TravelPlannerShowcase />
         <ProjectSection />
         <AISection />
-        <ComingSoon />
       </main>
       <footer>
         <Contact />
